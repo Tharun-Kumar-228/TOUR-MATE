@@ -31,8 +31,7 @@ const PORT = process.env.PORT || 5000;
 // Security middleware
 app.use(helmet());
 app.use(cors({
-  origin: 'https://tour-mate-lyart.vercel.app',
-  credentials: true
+  origin: "*",
 }));
 app.use(xss());
 app.use(mongoSanitize());
