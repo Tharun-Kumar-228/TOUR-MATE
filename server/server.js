@@ -31,8 +31,7 @@ const PORT = process.env.PORT || 5000;
 // Security middleware
 app.use(helmet());
 app.use(cors({
-  origin: 'http://localhost:5173',
-  credentials: true
+  origin: "*",
 }));
 app.use(xss());
 app.use(mongoSanitize());
